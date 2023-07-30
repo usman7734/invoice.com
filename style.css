@@ -1,0 +1,248 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  }
+  html {
+  font-size: 62.5%;
+  }
+  body {
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  }
+  ul {
+  list-style: none;
+  }
+  .heading-primary {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333;
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+  }
+  .btn:link,
+  .btn:visited {
+  display: inline-block;
+  background-color: #fd7272;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  transition: background-color 0.3s;
+  font-weight: 600;
+  }
+  .btn--full:link,
+  .btn--full:visited {
+  background-color: #fd7272;
+  color: #fff;
+  margin-bottom: 70px;
+  margin-right: 20px;
+  }
+  .btn--full:hover,
+  .btn--full:active {
+  background-color: #e46767;
+  }
+  .btn--outline:link,
+  .btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+  }
+  .btn--outline:hover,
+  .btn--outline:active {
+  background-color: #fff1f1;
+  box-shadow: inset 0 0 0 3px #fff;
+  }
+  .margin-right-sm {
+  margin-right: 1.6rem !important;
+  }
+  .container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  }
+  .grid {
+  display: grid;
+  gap: 9.6rem;
+  }
+  .grid--2-col {
+  grid-template-columns: repeat(2, 1fr);
+  }
+  .grid--3-col {
+  grid-template-columns: repeat(3, 1fr);
+  }
+  .grid--4-col {
+  grid-template-columns: repeat(4, 1fr);
+  }
+  input {
+  border: none;
+  font-family: "Inter", sans-serif !important;
+  font-size: 1.6rem;
+  }
+  textarea {
+  font-family: "Inter", sans-serif !important;
+  border: none;
+  }
+  .hide {
+  display: none;
+  }
+  .error {
+  border: #e74c3c 0.2rem solid;
+  }
+  .heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+  }
+  .text-inv {
+  font-size: 1.6rem;
+  }
+  .heading div:nth-child(1) {
+  position: absolute;
+  left: 2rem;
+  }
+  .heading div:nth-child(2) {
+  position: absolute;
+  right: 2rem;
+  }
+  .section-invoice {
+  max-width: 80rem;
+  margin: 0 auto;
+  margin-top: 4.8rem;
+  }
+  .invoice {
+  /* padding: 2.4rem 3.2rem; */
+  padding: 1.4rem 2.4rem;
+  /* background-color: #333; */
+  margin: 3.2rem auto;
+  border: solid 0.5rem #fff1f1;
+  }
+  .f-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
+  row-gap: 4.8rem;
+  align-items: center;
+  margin-bottom: 3.2rem;
+  }
+  #company_name {
+  font-size: 2.4rem;
+  }
+  .details-list {
+  list-style: none;
+  }
+  .details-list li {
+  margin: 0.6rem;
+  }
+  .details-list li h1{
+  /* margin: 0.6rem; */
+  font-size: 30px;
+  }
+  .details-list li p{
+  /* margin: 0.6rem; */
+  font-size: 20px;
+  }
+  .details-list label {
+  display: inline-block;
+  margin-top: 0.2rem;
+  color: #e74c3c;
+  }
+  #company_gstin {
+  text-transform: uppercase;
+  }
+  ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  text-transform: none;
+  }
+  #client_gstin {
+  text-transform: uppercase;
+  }
+  .invoice-name {
+  /* background-color: rebeccapurple; */
+  height: -webkit-fill-available;
+  position: relative;
+  }
+  .invoice-name input {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 3.6rem;
+  text-align: right;
+  font-weight: 500;
+  }
+  .invoice-dates {
+  /* background-color: yellow; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  align-self: start;
+  padding-top: 0.6rem;
+  grid-auto-rows: 1fr;
+  }
+  .invoice-dates input {
+  font-size: 1.4rem;
+  }
+  .item-table table {
+  border-collapse: separate;
+  border-spacing: 0 1rem;
+  }
+  .item td {
+  border-bottom: 0.2rem solid #fff1f1;
+  }
+  table input {
+  font-size: 1.4rem;
+  width: 100%;
+  box-sizing: border-box;
+  }
+  table textarea {
+  resize: vertical;
+  }
+  table tr:nth-child(1) {
+  height: 2.4rem;
+  background-color: #fff1f1;
+  }
+  table tr:nth-child(1) input {
+  height: 2.4rem;
+  background-color: #fff1f1;
+  }
+  .remove-btn {
+  font-size: 1.6rem;
+  color: #fff;
+  }
+  .remove-btn:hover {
+  color: #333;
+  text-decoration: none;
+  }
+  .section-total {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
+  row-gap: 4.8rem;
+  align-items: center;
+  margin-bottom: 3.2rem;
+  margin-top: 1.2rem;
+  position: relative;
+  }
+  .add-btn {
+  position: absolute;
+  top: 0;
+  }
+  .cal {
+  text-align: right;
+  }
+  .r-tot {
+  text-align: right;
+  }
+  .text-right {
+  text-align: right;
+  }
+  .lowerquantity{
+  margin-bottom: 100px;
+  }
+  .invoice-dates p{
+    font-size: 20px;
+  }

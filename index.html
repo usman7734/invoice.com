@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+         rel="stylesheet"
+         />
+      <link rel="stylesheet" href="./style.css" type="text/css" />
+      <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+         crossorigin="anonymous"
+         ></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+      <title>Usman Guest House</title>
+   </head>
+   <body>
+      <section class="section-invoice">
+      <div class="invoice" id="target">
+      <div class="f-grid">
+         <div class="company-details">
+            <ul class="details-list">
+               <li>
+                  <h1>Usman Guest House</h1>
+               </li>
+               <li>
+                  <p>Address: Mayur Vihar, Delhi</p>
+               </li>
+               <li>
+                  <p>GST: 9876543210123</p>
+               </li>
+               <li>
+                  <p>Contact: 9718068495</p>
+               </li>
+               <li>
+                  <p>Email: aliusman7734@gmail.com</p>
+               </li>
+            </ul>
+         </div>
+         <div class="invoice-name">
+         </div>
+         <div class="client-details">
+            <ul class="details-list">
+               <li>
+                  <h2>Bill To</h2>
+               </li>
+               <li>
+                  <input type="text" placeholder="Customer Name" />
+               </li>
+               <li>
+                  <input
+                     type="text"
+                     placeholder="Customer's GST (If Any)"
+                     id="client_gstin"
+                     />
+               </li>
+               <li><input type="text" placeholder="Customer's Address" /></li>
+            </ul>
+         </div>
+         <div class="invoice-dates">
+            <p>Invoice No: </p>
+            <input type="text" id="invoice_no" placeholder="INV-001" />
+            <p>Invoice Date</p>
+            <input type="date" id="invoice_date" placeholder="12-07-2021" />
+         </div>
+      </div>
+      <!-- Section Table with items  -->
+      <div class="item-table">
+         <table class="item-table-js">
+            <tr>
+               <td>
+                  <input type="text" value="Item Description" class="" />
+               </td>
+               <td>
+                  <input type="text" value="Quantity" class="text-right" />
+               </td>
+               <td>
+                  <input type="text" value="Rate" class="text-right" />
+               </td>
+               <td>
+                  <input type="text" value="Tax Rate%" class="text-right" />
+               </td>
+               <td>
+                  <input type="text" value="Amount" class="text-right" />
+               </td>
+            </tr>
+            <tr class="item">
+               <td>
+                  <div class="two-cells">
+                     <div>
+                        <textarea name="" id="" cols="35" rows="3">Pillow</textarea
+                           >
+                     </div>
+                  </div>
+               </td>
+               <td>
+                  <input type="text" class="cal quantity text-right" value="1" />
+               </td>
+               <td>
+                  <input type="text" class="cal rate text-right" value="100" />
+               </td>
+               <td>
+                  <input type="text" class="cal tax text-right" value="5" />
+               </td>
+               <td>
+                  <input
+                     type="text"
+                     class="r-tot text-right"
+                     value="100"
+                     readonly
+                     />
+               </td>
+            </tr>
+         </table>
+      </div>
+      <!-- section total  -->
+      <div class="section-total">
+         <div>
+            <a class="add-btn" href="javascript:void(0)">Add new row..</a>
+         </div>
+         <div class="total-table">
+            <table>
+               <tbody>
+                  <tr>
+                     <td>
+                        <input
+                           type="text"
+                           value="Sub Total(₹)"
+                           class="text-right"
+                           />
+                     </td>
+                     <td>
+                        <input
+                           type="text"
+                           value="100"
+                           id="sub_total"
+                           class="text-right"
+                           readonly
+                           />
+                     </td>
+                  </tr>
+                  <tr class="csgst">
+                     <td>
+                        <input type="text" value="CGST(₹)" class="text-right" />
+                     </td>
+                     <td>
+                        <input
+                           type="text"
+                           value="2.5"
+                           id="cgst"
+                           class="text-right"
+                           readonly
+                           />
+                     </td>
+                  </tr>
+                  <tr class="csgst">
+                     <td>
+                        <input type="text" value="SGST(₹)" class="text-right" />
+                     </td>
+                     <td>
+                        <input
+                           type="text"
+                           value="2.5"
+                           id="sgst"
+                           class="text-right"
+                           readonly
+                           />
+                     </td>
+                  </tr>
+                  <tr id="igst_id" class="hide">
+                     <td>
+                        <input type="text" value="IGST(₹)" class="text-right" />
+                     </td>
+                     <td>
+                        <input
+                           type="text"
+                           value="5"
+                           id="igst"
+                           class="text-right"
+                           readonly
+                           />
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <input type="text" value="Total(₹)" class="text-right" />
+                     </td>
+                     <td>
+                        <input
+                           type="text"
+                           value="105"
+                           id="total"
+                           class="text-right"
+                           readonly
+                           />
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      <!-- for addition couting and quantity -->
+      <ul class="details-list lowerquantity">
+         <li>
+            <p>Quantity: 10</p>
+         </li>
+      </ul>
+      <div class="heading">
+         <div>
+            <a href="#" id="pdf-gen" class="gen-pdf btn btn--full">Download PDF</a>
+            <a href="javascript:window.print()" class="gen-pdf btn btn--full">Print Now</a>
+         </div>
+      </div>
+      <script src="./index.js"></script>
+      <script src="./pdf_script.js"></script>
+   </body>
+</html>
